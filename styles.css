@@ -662,6 +662,9 @@ main,
 /* MOBILE */
 
 @media (max-width: 600px) {
+  .wordmark img {
+  width: 145px;
+}
   .opening-screen {
     min-height: auto;
   }
