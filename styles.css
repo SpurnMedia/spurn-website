@@ -11,6 +11,8 @@
   --pad: clamp(20px, 4vw, 64px);
 }
 
+/* RESET */
+
 * {
   box-sizing: border-box;
 }
@@ -47,6 +49,8 @@ img {
   display: block;
   max-width: 100%;
 }
+
+/* ACCESSIBILITY */
 
 .skip-link,
 .sr-only {
@@ -128,12 +132,29 @@ main,
   margin: 0 auto;
 }
 
+/* OPENING SCREEN */
+
+/*
+  Header yüksekliği masaüstünde 90px.
+  Bu nedenle açılış alanı ekran yüksekliğinden
+  header yüksekliği çıkarılarak hesaplanıyor.
+*/
+
+.opening-screen {
+  min-height: calc(100svh - 90px);
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
 /* INTRO */
 
 .hero {
+  flex: 0 0 auto;
   min-height: auto;
   padding: 48px var(--pad) 24px;
-  border-bottom: 0;
+  border: 0;
 }
 
 .hero-kicker,
@@ -160,18 +181,21 @@ main,
 /* FOUR EDITORIAL TRACKS */
 
 .lead-grid {
- padding: 0 var(--pad);
+  flex: 1;
+  min-height: 0;
+  padding: 0 var(--pad);
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
   gap: 0;
   background: var(--paper);
-  border-bottom: 1px solid var(--line);
 }
 
 .lead-grid article {
-min-width: 0;
-  background: var(--paper);
+  min-width: 0;
+  height: 100%;
   padding: 0 18px 36px;
+  background: var(--paper);
   border-right: 1px solid var(--line);
 }
 
@@ -190,6 +214,7 @@ min-width: 0;
 
 .track-card > a {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -198,11 +223,13 @@ min-width: 0;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 0.72rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
+/* COLOURED VISUAL AREAS */
+
 .visual {
-   height: clamp(220px, 18vw, 270px);
+  height: clamp(220px, 18vw, 270px);
   min-height: 0;
   margin-bottom: 18px;
   padding: 22px;
@@ -240,6 +267,8 @@ min-width: 0;
   background: var(--white);
   color: var(--ink);
 }
+
+/* TRACK TEXT */
 
 .track-card .category {
   display: block;
@@ -281,8 +310,8 @@ min-width: 0;
   margin: 0;
   text-transform: uppercase;
   font-size: clamp(2.2rem, 5vw, 5rem);
-  letter-spacing: -0.06em;
   line-height: 0.9;
+  letter-spacing: -0.06em;
 }
 
 .section-heading span {
@@ -298,10 +327,10 @@ min-width: 0;
 .latest-item {
   display: grid;
   grid-template-columns: 1fr auto;
+  align-items: end;
   gap: 30px;
   padding: 26px 0;
   border-bottom: 1px solid var(--line);
-  align-items: end;
 }
 
 .latest-item h3 {
@@ -338,8 +367,8 @@ min-width: 0;
 .feature-card h3 {
   margin: auto 0 22px;
   font-size: clamp(2.2rem, 4vw, 5rem);
-  letter-spacing: -0.06em;
   line-height: 0.92;
+  letter-spacing: -0.06em;
 }
 
 .feature-card p {
@@ -382,8 +411,8 @@ min-width: 0;
 
 .intelligence-grid .index {
   font-family: 'Chillax', sans-serif;
-  font-style: italic;
   font-size: 4rem;
+  font-style: italic;
 }
 
 .intelligence-grid h3 {
@@ -416,11 +445,11 @@ min-width: 0;
 }
 
 .discovery-grid span {
+  color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--accent);
 }
 
 .discovery-grid h3 {
@@ -438,8 +467,8 @@ min-width: 0;
   background: var(--accent);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px;
   align-items: end;
+  gap: 50px;
 }
 
 .newsletter h2 {
@@ -505,8 +534,8 @@ min-width: 0;
   padding: 70px var(--pad) 35px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 28px;
   align-items: start;
+  gap: 28px;
 }
 
 .footer-wordmark {
@@ -540,6 +569,10 @@ min-width: 0;
     min-height: 72px;
   }
 
+  .opening-screen {
+    min-height: calc(100svh - 72px);
+  }
+
   .menu-button {
     display: block;
   }
@@ -571,6 +604,7 @@ min-width: 0;
   .lead-grid article,
   .lead-grid article:first-child,
   .lead-grid article:last-child {
+    height: auto;
     padding: 0 14px 28px;
     border-right: 1px solid var(--line);
   }
@@ -590,8 +624,8 @@ min-width: 0;
   }
 
   .visual {
-     height: 270px;
-  min-height: 0;
+    height: 270px;
+    min-height: 0;
   }
 
   .editorial-grid,
@@ -618,12 +652,17 @@ min-width: 0;
 /* MOBILE */
 
 @media (max-width: 600px) {
+  .opening-screen {
+    min-height: auto;
+  }
+
   .hero {
     min-height: auto;
     padding: 32px var(--pad) 18px;
   }
 
   .lead-grid {
+    flex: initial;
     grid-template-columns: 1fr;
   }
 
@@ -632,6 +671,7 @@ min-width: 0;
   .lead-grid article:last-child,
   .lead-grid article:nth-child(odd),
   .lead-grid article:nth-child(even) {
+    height: auto;
     padding: 24px 0;
     border-right: 0;
     border-top: 1px solid var(--line);
@@ -644,7 +684,7 @@ min-width: 0;
 
   .visual {
     height: 260px;
-  min-height: 0;
+    min-height: 0;
   }
 
   .section-heading,
