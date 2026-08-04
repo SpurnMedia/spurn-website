@@ -123,12 +123,13 @@ main,
 /* HERO */
 
 .hero {
-  min-height: 78vh;
-  padding: clamp(72px, 6.5vw, 96px) var(--pad) 70px;
-  border-bottom: 1px solid var(--line);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  mmin-height: auto;
+  padding: 48px var(--pad) 24px;
+  border-bottom: 0;
+}
+
+.hero-kicker {
+  margin: 0;
 }
 
 .hero-kicker,
