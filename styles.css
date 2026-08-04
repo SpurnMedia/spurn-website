@@ -566,7 +566,7 @@ main,
 /* TABLET */
 
 @media (max-width: 900px) {
-  .header-inner {
+ .header-inner {
     min-height: 72px;
   }
 
@@ -574,10 +574,13 @@ main,
     min-height: calc(100svh - 72px);
   }
 
+  .track-card h2 {
+    min-height: 0;
+  }
+
   .menu-button {
     display: block;
   }
-
   .site-nav {
     display: none;
     position: absolute;
