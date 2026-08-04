@@ -202,9 +202,10 @@ main,
 }
 
 .visual {
-  min-height: 360px;
-  margin-bottom: 22px;
-  padding: 24px;
+   height: clamp(220px, 18vw, 270px);
+  min-height: 0;
+  margin-bottom: 18px;
+  padding: 22px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -213,10 +214,10 @@ main,
 }
 
 .visual strong {
-  font-size: clamp(2rem, 3vw, 4.2rem);
+  font-size: clamp(1.8rem, 2.4vw, 3.4rem);
   font-weight: 700;
-  line-height: 0.88;
-  letter-spacing: -0.06em;
+  line-height: 0.9;
+  letter-spacing: -0.055em;
 }
 
 .visual-dark {
