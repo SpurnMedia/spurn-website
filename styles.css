@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap');
-
+@import url('https://api.fontshare.com/v2/css?f[]=chillax@200,300,400,500,600,700&display=swap');
 :root {
   --paper: #f2efe8;
   --ink: #111111;
@@ -23,7 +22,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: "DM Sans", Arial, sans-serif;
+  font-family: font-family: 'Chillax', sans-serif;
   line-height: 1.4;
 }
 
@@ -145,7 +144,7 @@ main,
 }
 
 .hero h1 em {
-  font-family: "Instrument Serif", Georgia, serif;
+  font-family: 'Chillax', sans-serif;
   font-weight: 400;
 }
 
@@ -318,7 +317,7 @@ main,
 }
 
 .feature-number {
-  font-family: "Instrument Serif", Georgia, serif;
+  font-family: 'Chillax', sans-serif;
   font-size: 5rem;
   font-style: italic;
 }
@@ -349,7 +348,7 @@ main,
 }
 
 .intelligence-grid .index {
-  font-family: "Instrument Serif", Georgia, serif;
+  font-family: 'Chillax', sans-serif;
   font-style: italic;
   font-size: 4rem;
 }
