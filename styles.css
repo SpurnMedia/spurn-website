@@ -210,6 +210,11 @@ main,
   border: 2px solid var(--ink);
 }
 
+.visual-cream {
+  background: var(--white);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+}
 .lead-story h2,
 .side-story h3 {
   margin: 10px 0;
