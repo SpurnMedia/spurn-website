@@ -590,7 +590,8 @@ main,
   }
 
   .visual {
-    min-height: 320px;
+     height: 270px;
+  min-height: 0;
   }
 
   .editorial-grid,
@@ -642,7 +643,8 @@ main,
   }
 
   .visual {
-    min-height: 300px;
+    height: 260px;
+  min-height: 0;
   }
 
   .section-heading,
