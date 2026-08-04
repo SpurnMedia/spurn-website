@@ -142,25 +142,9 @@ main,
   font-weight: 700;
 }
 
-.hero h1 {
-  max-width: 1250px;
-  margin: 28px 0;
-  font-size: clamp(3.2rem, 8vw, 8.6rem);
-  line-height: 0.86;
-  letter-spacing: -0.065em;
-  font-weight: 700;
-}
-
 .hero h1 em {
   font-family: 'Chillax', sans-serif;
   font-weight: 400;
-}
-
-.hero-copy {
-  max-width: 720px;
-  margin: 12px 0 34px;
-  font-size: clamp(1.1rem, 2vw, 1.45rem);
-  color: #302e2a;
 }
 
 .text-link {
@@ -173,7 +157,7 @@ main,
 /* LEAD STORIES */
 
 .lead-grid {
-  padding: var(--pad);
+  padding: 0 var(--pad) var(--pad);
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 1px;
@@ -585,12 +569,8 @@ main,
 
 @media (max-width: 600px) {
   .hero {
-    min-height: auto;
-    padding: 48px var(--pad) 54px;
-  }
-
-  .hero h1 {
-    font-size: clamp(3rem, 15vw, 5rem);
+    in-height: auto;
+  padding: 32px var(--pad) 18px;
   }
 
   .section-heading,
