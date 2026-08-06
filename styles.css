@@ -750,3 +750,37 @@ main,
     border-top: 1px solid rgba(17, 17, 17, 0.35);
   }
 }
+/* FINAL HEADER LOGO SIZE */
+
+.site-header .wordmark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  height: 68px;
+  flex: 0 0 auto;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.site-header .wordmark img {
+  display: block;
+  width: auto !important;
+  height: 64px !important;
+  max-width: 220px !important;
+  max-height: 64px !important;
+  object-fit: contain;
+  object-position: left center;
+}
+
+@media (max-width: 600px) {
+  .site-header .wordmark {
+    height: 54px;
+  }
+
+  .site-header .wordmark img {
+    height: 50px !important;
+    max-width: 170px !important;
+    max-height: 50px !important;
+  }
+}
