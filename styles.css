@@ -99,20 +99,18 @@ img {
 }
 
 .wordmark {
-  display: inline-grid;
-  justify-items: end;
+   display: inline-flex;
   align-items: center;
   flex: 0 0 auto;
-  line-height: 1;
+  line-height: 0;
 }
 
 .wordmark img {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-end;
-  flex: 0 0 auto;
-  color: var(--ink);
-  line-height: 1;
+  display: block;
+  width: 210px;
+  height: 68px;
+  object-fit: contain;
+  object-position: left center;
 }
 
 .wordmark-main {
