@@ -136,15 +136,6 @@ img {
   transform-origin: center;
 }
 
-.wordmark-media {
-  margin-top: 7px;
-  padding-right: 1px;
-  font-size: clamp(0.58rem, 0.8vw, 0.82rem);
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: 0.01em;
-}
-
 .menu-button {
   display: none;
   border: 1px solid var(--ink);
