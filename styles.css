@@ -99,16 +99,26 @@ img {
 }
 
 .wordmark {
-   display: inline-flex;
+  display: inline-grid;
+  justify-items: end;
   align-items: center;
   flex: 0 0 auto;
-  line-height: 0;
+  line-height: 1;
 }
 
 .wordmark img {
   display: block;
   width: clamp(150px, 15vw, 225px);
   height: auto;
+}
+
+.wordmark-media {
+  margin-top: 2px;
+  padding-right: 1px;
+  font-size: clamp(0.58rem, 0.8vw, 0.82rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.02em;
 }
 
 .site-nav {
