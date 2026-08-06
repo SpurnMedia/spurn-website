@@ -6,6 +6,7 @@
   --muted: #6f6b63;
   --line: #171717;
   --accent: #e7422d;
+  --orange: #d9772a;
   --white: #fffdf8;
   --max: 1440px;
   --pad: clamp(20px, 4vw, 64px);
@@ -274,6 +275,10 @@ main,
 
 .visual-red {
   background: var(--accent);
+  color: var(--ink);
+}
+.visual-orange {
+  background: var(--orange);
   color: var(--ink);
 }
 
