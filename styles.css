@@ -910,7 +910,7 @@ main,
 /* NEWS ROWS */
 
 .latest-wire-row {
-  min-height: 74px;
+  min-height: 68px;
   display: grid;
   grid-template-columns: 72px 145px minmax(0, 1fr) 24px;
   align-items: center;
