@@ -1151,14 +1151,14 @@ main,
 .discovery-media {
   position: relative;
   width: 100%;
-  height: clamp(175px, 14vw, 215px);
+  height: clamp(135px, 11vw, 165px);
 
   overflow: hidden;
   background: #d8d3c9;
 }
 
 .discovery-media-main {
-  height: clamp(360px, 29vw, 440px);
+  height: clamp(300px, 24vw, 360px);
 }
 
 .discovery-visual-label {
@@ -1218,7 +1218,7 @@ main,
 .discovery-secondary-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 40px 26px;
+  gap: 26px 26px;
 }
 
 .discovery-card {
