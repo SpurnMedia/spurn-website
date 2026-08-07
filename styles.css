@@ -2129,3 +2129,13 @@ main,
   }
 
 }
+/* Featured rail — remove old 2x2 tablet row offset */
+
+@media (max-width: 900px) {
+
+  .lead-grid .track-card:nth-child(n + 3) {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+}
