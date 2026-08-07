@@ -1069,7 +1069,6 @@ main,
   background: var(--paper);
   color: var(--ink);
   border-bottom: 1px solid var(--line);
-  scroll-margin-top: 110px;
 }
 
 .discovery-inner {
