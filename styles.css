@@ -1334,3 +1334,43 @@ main,
   }
 
 }
+/* =========================================================
+   INTELLIGENCE — SIGNAL ANCHORS
+   ========================================================= */
+
+.intelligence-anchor {
+  min-height: 86px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.intelligence-anchor strong {
+  max-width: 100%;
+  font-size: clamp(1.35rem, 1.65vw, 1.8rem);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+.intelligence-anchor span {
+  color: #bcb7ad;
+  font-size: 0.62rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.intelligence-anchor::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 1px;
+  margin-top: 4px;
+  background: #bcb7ad;
+  opacity: 0.55;
+}
