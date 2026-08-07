@@ -2010,3 +2010,58 @@ main,
   }
 
 }
+/* =========================================================
+   FEATURED EDITORIAL — TABLET / MOBILE HORIZONTAL RAIL
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .lead-grid {
+    display: flex;
+    grid-template-columns: none;
+
+    gap: 16px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-inline: contain;
+
+    padding-bottom: 10px;
+
+    scrollbar-width: none;
+  }
+
+  .lead-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .lead-grid .track-card {
+    flex: 0 0 46%;
+    min-width: 0;
+
+    scroll-snap-align: start;
+
+    border: 0;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .lead-grid {
+    gap: 14px;
+  }
+
+  .lead-grid .track-card {
+    flex-basis: 86%;
+  }
+
+}
