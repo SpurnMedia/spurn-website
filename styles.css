@@ -2065,3 +2065,21 @@ main,
   }
 
 }
+/* Featured Editorial rail — prevent vertical stretching */
+
+@media (max-width: 900px) {
+
+  .lead-grid {
+    align-items: flex-start;
+  }
+
+  .lead-grid .track-card {
+    align-self: flex-start;
+    height: auto;
+  }
+
+  .lead-grid .track-card > a {
+    height: auto;
+  }
+
+}
