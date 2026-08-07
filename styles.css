@@ -1069,6 +1069,7 @@ main,
   background: var(--paper);
   color: var(--ink);
   border-bottom: 1px solid var(--line);
+  scroll-margin-top: 110px;
 }
 
 .discovery-inner {
@@ -1158,7 +1159,7 @@ main,
 }
 
 .discovery-media-main {
-  height: clamp(380px, 31vw, 470px);
+  height: clamp(360px, 29vw, 440px);
 }
 
 .discovery-visual-label {
@@ -1206,7 +1207,7 @@ main,
   max-width: 780px;
   margin: 14px 0 0;
 
-  font-size: clamp(2rem, 2.55vw, 3rem);
+  font-size: clamp(1.9rem, 2.3vw, 2.6rem);
   font-weight: 600;
   line-height: 0.98;
   letter-spacing: -0.045em;
