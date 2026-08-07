@@ -2099,3 +2099,33 @@ main,
   }
 
 }
+/* =========================================================
+   FEATURED EDITORIAL RAIL — UNIFORM CARD ALIGNMENT
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .lead-grid .track-card,
+  .lead-grid .track-card:first-child,
+  .lead-grid .track-card:last-child {
+    padding: 0 0 24px;
+    border-right: 0;
+    margin: 0;
+
+    align-self: flex-start;
+  }
+
+  .lead-grid .track-card > a {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .lead-grid .visual {
+    width: 100%;
+    margin-top: 0;
+  }
+
+}
