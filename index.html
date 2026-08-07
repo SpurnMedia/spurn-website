@@ -424,43 +424,80 @@
 
   </div>
 </section>
-    
-    <section class="newsletter" aria-labelledby="newsletter-title">
-      <div>
-        <span class="eyebrow">The SPURN Brief</span>
-        <h2 id="newsletter-title">Clarity, without the noise.</h2>
-      </div>
-      <form class="newsletter-form" id="newsletter-form">
-        <label class="sr-only" for="email">Email address</label>
-        <input id="email" name="email" type="email" placeholder="Your email address" required>
-        <button type="submit">Subscribe</button>
-      </form>
-      <p class="form-message" id="form-message" aria-live="polite"></p>
-    </section>
-
-    <section class="about" id="about">
-      <div class="section-heading">
-        <h2>About SPURN</h2>
-      </div>
-      <p>
-        SPURN covers the intersection of brands, technology, culture and creativity.
-        It exists to explain what is changing, interrogate who benefits, and surface
-        ideas that deserve more attention.
-      </p>
-    </section>
   </main>
 
-  <footer class="site-footer">
+<!-- SPURN CLOSING -->
+
+<section class="closing-section" id="about">
+
+  <!-- NEWSLETTER -->
+
+  <section class="newsletter closing-newsletter" aria-labelledby="newsletter-title">
+    <div>
+      <span class="eyebrow">The SPURN Brief</span>
+      <h2 id="newsletter-title">Clarity, without the noise.</h2>
+    </div>
+
+    <form class="newsletter-form" id="newsletter-form">
+      <label class="sr-only" for="email">Email address</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        placeholder="Your email address"
+        required
+      >
+      <button type="submit">Subscribe</button>
+    </form>
+
+    <p
+      class="form-message"
+      id="form-message"
+      aria-live="polite"
+    ></p>
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="about closing-about" aria-labelledby="about-title">
+
+    <div class="section-heading">
+      <h2 id="about-title">About SPURN</h2>
+    </div>
+
+    <p>
+      SPURN covers the intersection of brands, technology, culture and creativity.
+      It exists to explain what is changing, interrogate who benefits, and surface
+      ideas that deserve more attention.
+    </p>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer closing-footer">
+
     <a class="wordmark footer-wordmark" href="/">SPURN</a>
-    <p>Independent. Curious. Constructively disobedient.</p>
+
+    <p>
+      Independent. Curious. Constructively disobedient.
+    </p>
+
     <div class="footer-links">
       <a href="mailto:hello@spurnmedia.com">Contact</a>
       <a href="#">Privacy</a>
       <a href="#">LinkedIn</a>
     </div>
-    <small>© <span id="year"></span> Spurn Media.</small>
+
+    <small>
+      © <span id="year"></span> Spurn Media.
+    </small>
+
   </footer>
 
+</section>
   <script src="script.js"></script>
 </body>
 </html>
