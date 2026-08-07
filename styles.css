@@ -1993,3 +1993,20 @@ main,
   }
 
 }
+/* =========================================================
+   ANCHOR + SECTION SEPARATOR CLEANUP
+   ========================================================= */
+
+@media (min-width: 901px) {
+
+  /* Keep The Latest title below the sticky header */
+  #news {
+    scroll-margin-top: 52px;
+  }
+
+  /* Closing screen already has its own visual separation */
+  .editorial-section {
+    border-bottom: 0;
+  }
+
+}
