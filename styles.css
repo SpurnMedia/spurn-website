@@ -2083,3 +2083,19 @@ main,
   }
 
 }
+/* =========================================================
+   FEATURED EDITORIAL — RELEASE DESKTOP VIEWPORT HEIGHT
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .opening-screen {
+    min-height: 0;
+    height: auto;
+  }
+
+  .lead-grid {
+    flex: 0 0 auto;
+  }
+
+}
