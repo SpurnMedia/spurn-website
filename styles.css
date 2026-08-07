@@ -1717,3 +1717,56 @@ main,
 #editorial {
   scroll-margin-top: 52px;
 }
+/* =========================================================
+   EDITORIAL — DESKTOP VIEWPORT FIT
+   ========================================================= */
+
+@media (min-width: 901px) {
+
+  .editorial-inner {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .editorial-head {
+    min-height: 68px;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+
+  .editorial-main {
+    min-height: 420px;
+    padding: 28px 34px 24px;
+  }
+
+  .editorial-main h3 {
+    margin-top: 36px;
+    font-size: clamp(2.5rem, 3.6vw, 4.6rem);
+  }
+
+  .editorial-main .editorial-dek {
+    margin-top: 18px;
+  }
+
+  .editorial-card {
+    min-height: 0;
+    padding: 22px 30px 20px;
+  }
+
+  .editorial-card h3 {
+    margin-top: 20px;
+    font-size: clamp(1.55rem, 1.85vw, 2.15rem);
+  }
+
+  .editorial-card .editorial-dek {
+    margin-top: 12px;
+    font-size: 0.86rem;
+    line-height: 1.35;
+  }
+
+  .editorial-byline {
+    padding-top: 16px;
+    font-size: 0.62rem;
+  }
+
+}
