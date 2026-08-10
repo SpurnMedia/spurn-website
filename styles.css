@@ -1325,13 +1325,13 @@ main,
   }
 
   .discovery-main {
-    flex: 0 0 64%;
+    flex: 0 0 82%;
     min-width: 0;
     scroll-snap-align: start;
   }
 
   .discovery-card {
-    flex: 0 0 40%;
+    flex: 0 0 46%;
     min-width: 0;
     scroll-snap-align: start;
   }
