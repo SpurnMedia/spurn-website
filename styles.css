@@ -1289,8 +1289,7 @@ main,
 
 }
 
-
-/* TABLET */
+/* TABLET — DISCOVERY HORIZONTAL RAIL */
 
 @media (max-width: 900px) {
 
@@ -1300,46 +1299,52 @@ main,
   }
 
   .discovery-layout {
-    grid-template-columns: 1fr;
-    gap: 48px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-inline: contain;
+
+    padding-bottom: 10px;
+
+    scrollbar-width: none;
+  }
+
+  .discovery-layout::-webkit-scrollbar {
+    display: none;
+  }
+
+  .discovery-secondary-grid {
+    display: contents;
+  }
+
+  .discovery-main {
+    flex: 0 0 64%;
+    min-width: 0;
+    scroll-snap-align: start;
+  }
+
+  .discovery-card {
+    flex: 0 0 40%;
+    min-width: 0;
+    scroll-snap-align: start;
   }
 
   .discovery-media-main {
-    height: clamp(340px, 55vw, 500px);
+    height: 320px;
   }
 
-/* DISCOVERY — SECONDARY TABLET RAIL */
+  .discovery-card .discovery-media {
+    height: 220px;
+  }
 
-.discovery-secondary-grid {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-
-  overflow-x: auto;
-  overflow-y: hidden;
-
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior-inline: contain;
-
-  padding-bottom: 10px;
-
-  scrollbar-width: none;
 }
-
-.discovery-secondary-grid::-webkit-scrollbar {
-  display: none;
-}
-
-.discovery-secondary-grid .discovery-card {
-  flex: 0 0 46%;
-  min-width: 0;
-
-  scroll-snap-align: start;
-}
-
-
 /* MOBILE */
 
 @media (max-width: 600px) {
@@ -1353,35 +1358,36 @@ main,
     min-height: 48px;
     margin-bottom: 24px;
   }
+/* MOBILE — DISCOVERY HORIZONTAL RAIL */
 
-  .discovery-layout {
-    gap: 36px;
-  }
-
-  .discovery-media-main {
-    height: 72vw;
-    max-height: 430px;
-  }
-
-  .discovery-main h3 {
-    font-size: 2rem;
-    line-height: 1;
-  }
-
-  .discovery-secondary-grid {
+.discovery-layout {
   gap: 14px;
 }
 
-.discovery-secondary-grid .discovery-card {
+.discovery-main {
   flex: 0 0 86%;
+  min-width: 0;
 }
 
-  .discovery-card .discovery-media {
-    height: 58vw;
-    max-height: 320px;
-  }
+.discovery-card {
+  flex: 0 0 78%;
+  min-width: 0;
+}
 
+.discovery-media-main {
+  height: 68vw;
+  max-height: 300px;
+}
 
+.discovery-main h3 {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.discovery-card .discovery-media {
+  height: 52vw;
+  max-height: 240px;
+}
 /* =========================================================
    INTELLIGENCE — SIGNAL ANCHORS
    ========================================================= */
