@@ -597,8 +597,9 @@ main,
   }
 
   .opening-screen {
-    min-height: calc(100svh - 72px);
-  }
+  min-height: 0;
+  height: auto;
+}
 
   .track-card h2 {
     min-height: 0;
@@ -627,36 +628,62 @@ main,
     padding-top: 40px;
   }
 
-  .lead-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+/* FEATURED EDITORIAL — TABLET RAIL */
 
-  .lead-grid article,
-  .lead-grid article:first-child,
-  .lead-grid article:last-child {
-    height: auto;
-    padding: 0 14px 28px;
-    border-right: 1px solid var(--line);
-  }
+.lead-grid {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: flex-start;
+  gap: 16px;
 
-  .lead-grid article:nth-child(odd) {
-    padding-left: 0;
-  }
+  overflow-x: auto;
+  overflow-y: hidden;
 
-  .lead-grid article:nth-child(even) {
-    padding-right: 0;
-    border-right: 0;
-  }
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 
-  .lead-grid article:nth-child(n + 3) {
-    padding-top: 28px;
-    border-top: 1px solid var(--line);
-  }
+  padding: 0 var(--pad) 10px;
 
-  .visual {
-    height: 270px;
-    min-height: 0;
-  }
+  scrollbar-width: none;
+}
+
+.lead-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.lead-grid .track-card,
+.lead-grid .track-card:first-child,
+.lead-grid .track-card:last-child,
+.lead-grid .track-card:nth-child(odd),
+.lead-grid .track-card:nth-child(even),
+.lead-grid .track-card:nth-child(n + 3) {
+  flex: 0 0 46%;
+  min-width: 0;
+
+  height: auto;
+  padding: 0;
+  margin: 0;
+
+  border-right: 0;
+  border-top: 0;
+
+  align-self: flex-start;
+  scroll-snap-align: start;
+}
+
+.lead-grid .track-card > a {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.lead-grid .visual {
+  width: 100%;
+  height: 270px;
+  min-height: 0;
+  margin-top: 0;
+}
 
   .editorial-grid,
   .intelligence-grid,
@@ -693,32 +720,30 @@ main,
     min-height: auto;
     padding: 32px var(--pad) 18px;
   }
+/* FEATURED EDITORIAL — MOBILE RAIL */
 
-  .lead-grid {
-    flex: initial;
-    grid-template-columns: 1fr;
-  }
+.lead-grid {
+  gap: 14px;
+}
 
-  .lead-grid article,
-  .lead-grid article:first-child,
-  .lead-grid article:last-child,
-  .lead-grid article:nth-child(odd),
-  .lead-grid article:nth-child(even) {
-    height: auto;
-    padding: 24px 0;
-    border-right: 0;
-    border-top: 1px solid var(--line);
-  }
+.lead-grid .track-card,
+.lead-grid .track-card:first-child,
+.lead-grid .track-card:last-child,
+.lead-grid .track-card:nth-child(odd),
+.lead-grid .track-card:nth-child(even),
+.lead-grid .track-card:nth-child(n + 3) {
+  flex: 0 0 86%;
 
-  .lead-grid article:first-child {
-    padding-top: 0;
-    border-top: 0;
-  }
+  padding: 0;
+  margin: 0;
 
-  .visual {
-    height: 260px;
-    min-height: 0;
-  }
+  border-right: 0;
+  border-top: 0;
+}
+
+.lead-grid .visual {
+  height: 260px;
+}
 
   .section-heading,
   .latest-item {
@@ -2007,135 +2032,6 @@ main,
   /* Closing screen already has its own visual separation */
   .editorial-section {
     border-bottom: 0;
-  }
-
-}
-/* =========================================================
-   FEATURED EDITORIAL — TABLET / MOBILE HORIZONTAL RAIL
-   ========================================================= */
-
-@media (max-width: 900px) {
-
-  .lead-grid {
-    display: flex;
-    grid-template-columns: none;
-
-    gap: 16px;
-
-    overflow-x: auto;
-    overflow-y: hidden;
-
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-inline: contain;
-
-    padding-bottom: 10px;
-
-    scrollbar-width: none;
-  }
-
-  .lead-grid::-webkit-scrollbar {
-    display: none;
-  }
-
-  .lead-grid .track-card {
-    flex: 0 0 46%;
-    min-width: 0;
-
-    scroll-snap-align: start;
-
-    border: 0;
-  }
-
-}
-
-
-/* MOBILE */
-
-@media (max-width: 600px) {
-
-  .lead-grid {
-    gap: 14px;
-  }
-
-  .lead-grid .track-card {
-    flex-basis: 86%;
-  }
-
-}
-/* Featured Editorial rail — prevent vertical stretching */
-
-@media (max-width: 900px) {
-
-  .lead-grid {
-    align-items: flex-start;
-  }
-
-  .lead-grid .track-card {
-    align-self: flex-start;
-    height: auto;
-  }
-
-  .lead-grid .track-card > a {
-    height: auto;
-  }
-
-}
-/* =========================================================
-   FEATURED EDITORIAL — RELEASE DESKTOP VIEWPORT HEIGHT
-   ========================================================= */
-
-@media (max-width: 900px) {
-
-  .opening-screen {
-    min-height: 0;
-    height: auto;
-  }
-
-  .lead-grid {
-    flex: 0 0 auto;
-  }
-
-}
-/* =========================================================
-   FEATURED EDITORIAL RAIL — UNIFORM CARD ALIGNMENT
-   ========================================================= */
-
-@media (max-width: 900px) {
-
-  .lead-grid .track-card,
-  .lead-grid .track-card:first-child,
-  .lead-grid .track-card:last-child {
-    padding: 0 0 24px;
-    border-right: 0;
-    margin: 0;
-
-    align-self: flex-start;
-  }
-
-  .lead-grid .track-card > a {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    margin: 0;
-  }
-
-  .lead-grid .visual {
-    width: 100%;
-    margin-top: 0;
-  }
-
-}
-/* Featured rail — remove old 2x2 tablet row offset */
-
-@media (max-width: 900px) {
-
-  .lead-grid .track-card:nth-child(n + 3) {
-    padding-top: 0;
-    border-top: 0;
   }
 
 }
