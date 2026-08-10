@@ -1308,10 +1308,35 @@ main,
     height: clamp(340px, 55vw, 500px);
   }
 
-  .discovery-secondary-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+/* DISCOVERY — SECONDARY TABLET RAIL */
 
+.discovery-secondary-grid {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-inline: contain;
+
+  padding-bottom: 10px;
+
+  scrollbar-width: none;
+}
+
+.discovery-secondary-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.discovery-secondary-grid .discovery-card {
+  flex: 0 0 46%;
+  min-width: 0;
+
+  scroll-snap-align: start;
 }
 
 
@@ -1344,21 +1369,19 @@ main,
   }
 
   .discovery-secondary-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
+  gap: 14px;
+}
+
+.discovery-secondary-grid .discovery-card {
+  flex: 0 0 86%;
+}
 
   .discovery-card .discovery-media {
     height: 58vw;
     max-height: 320px;
   }
 
-  /* Homepage mobile: dominant + first 2 secondary items */
-  .discovery-card:nth-child(n + 3) {
-    display: none;
-  }
 
-}
 /* =========================================================
    INTELLIGENCE — SIGNAL ANCHORS
    ========================================================= */
