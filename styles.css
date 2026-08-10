@@ -1705,8 +1705,7 @@ main,
 
 }
 
-
-/* TABLET */
+/* TABLET — EDITORIAL HORIZONTAL RAIL */
 
 @media (max-width: 900px) {
 
@@ -1716,22 +1715,50 @@ main,
   }
 
   .editorial-layout {
-    grid-template-columns: 1fr;
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-inline: contain;
+
+    scrollbar-width: none;
+  }
+
+  .editorial-layout::-webkit-scrollbar {
+    display: none;
+  }
+
+  .editorial-secondary {
+    display: contents;
   }
 
   .editorial-main {
+    flex: 0 0 82%;
+    min-width: 0;
     min-height: 420px;
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
+
+    border-right: 1px solid var(--line);
+    border-bottom: 0;
+
+    scroll-snap-align: start;
   }
 
   .editorial-main h3 {
     margin-top: 40px;
   }
 
-  .editorial-secondary {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: none;
+  .editorial-card {
+    flex: 0 0 46%;
+    min-width: 0;
+    min-height: 420px;
+
+    scroll-snap-align: start;
   }
 
   .editorial-card + .editorial-card {
@@ -1740,9 +1767,7 @@ main,
   }
 
 }
-
-
-/* MOBILE */
+  /* MOBILE — EDITORIAL HORIZONTAL RAIL */
 
 @media (max-width: 600px) {
 
@@ -1764,8 +1789,13 @@ main,
     font-size: 0.8rem;
   }
 
+  .editorial-layout {
+    gap: 0;
+  }
+
   .editorial-main {
-    min-height: 410px;
+    flex: 0 0 86%;
+    min-height: 390px;
     padding: 24px 22px;
   }
 
@@ -1778,18 +1808,15 @@ main,
     font-size: 0.95rem;
   }
 
-  .editorial-secondary {
-    grid-template-columns: 1fr;
-  }
-
   .editorial-card {
-    min-height: 260px;
+    flex: 0 0 78%;
+    min-height: 390px;
     padding: 24px 22px;
   }
 
   .editorial-card + .editorial-card {
-    border-left: 0;
-    border-top: 1px solid var(--line);
+    border-left: 1px solid var(--line);
+    border-top: 0;
   }
 
   .editorial-card h3 {
@@ -1803,11 +1830,7 @@ main,
   }
 
 }
-/* Editorial anchor offset */
-
-#editorial {
-  scroll-margin-top: 52px;
-}
+  
 /* =========================================================
    EDITORIAL — DESKTOP VIEWPORT FIT
    ========================================================= */
