@@ -1840,6 +1840,10 @@ main,
 
 @media (min-width: 901px) {
 
+   #editorial {
+    scroll-margin-top: 120px;
+  }
+  
   .editorial-inner {
     padding-top: 48px;
     padding-bottom: 48px;
