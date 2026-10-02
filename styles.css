@@ -2405,5 +2405,15 @@ main,
   background-position: center;
   background-repeat: no-repeat;
 }
+.discovery-islands-image {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.08),
+      rgba(0, 0, 0, 0.08)
+    ),
+    url("assets/Celestial-Archipelag-Map.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 /* GitHub Pages rebuild trigger 2026-10-02 */
