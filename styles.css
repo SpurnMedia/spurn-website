@@ -2323,3 +2323,40 @@ main,
     url("assets/home-tiles/kallax-storageborn.png");
   background-color: #d9772a;
 }
+
+
+/* =========================================================
+   HOMEPAGE TERRITORY IMAGE TREATMENTS
+   Keep each territory's canonical colour identity while
+   adding story-specific editorial imagery.
+   ========================================================= */
+
+.visual-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.visual-creativity {
+  background-image:
+    linear-gradient(rgba(231, 66, 45, 0.22), rgba(231, 66, 45, 0.22)),
+    url("assets/home-tiles/jia-curated-2026.jpg");
+}
+
+.visual-culture {
+  background-image:
+    linear-gradient(rgba(17, 17, 17, 0.42), rgba(17, 17, 17, 0.42)),
+    url("assets/home-tiles/type-around-town.jpg");
+}
+
+.visual-technology {
+  background-image:
+    linear-gradient(rgba(242, 239, 232, 0.42), rgba(242, 239, 232, 0.42)),
+    url("assets/home-tiles/australia-u16.jpg");
+}
+
+.visual-brands {
+  background-image:
+    linear-gradient(rgba(217, 119, 42, 0.30), rgba(217, 119, 42, 0.30)),
+    url("assets/home-tiles/kallax-storageborn.jpg");
+}
