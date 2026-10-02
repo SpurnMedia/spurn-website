@@ -2415,5 +2415,13 @@ main,
   background-position: center;
   background-repeat: no-repeat;
 }
+.discovery-card-visual-murmur {
+  background-image: url("assets/home-tiles/Moonlit-Noir-Canal-Town.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  .discovery-card-visual-murmur .discovery-visual-label {
+  color: #f5f1e8;
+}
 
 /* GitHub Pages rebuild trigger 2026-10-02 */
