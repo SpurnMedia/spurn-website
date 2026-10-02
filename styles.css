@@ -2399,5 +2399,11 @@ main,
   position: relative;
   z-index: 1;
 }
+.discovery-type-around-visual {
+  background-image: url("assets/home-tiles/Urban-Typography-in-Grayscale-and-Red.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 /* GitHub Pages rebuild trigger 2026-10-02 */
