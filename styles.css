@@ -2188,7 +2188,7 @@ main,
 @media (min-width: 901px) {
 
   #editorial {
-    scroll-margin-top: 90px;
+    scroll-margin-top: 82px;
     min-height: calc(100svh - 90px);
   }
 }
