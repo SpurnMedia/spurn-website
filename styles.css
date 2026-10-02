@@ -2378,5 +2378,26 @@ main,
   position: relative;
   z-index: 1;
 }
+/* =========================================================
+   DISCOVERY — JIA CURATED MAIN IMAGE
+   ========================================================= */
+
+.discovery-media-jia {
+  background-image:
+    linear-gradient(
+      rgba(242, 239, 232, 0.08),
+      rgba(242, 239, 232, 0.08)
+    ),
+    url("assets/home-tiles/What an Architectural Model Lets You See.png");
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.discovery-media-jia .discovery-visual-label {
+  position: relative;
+  z-index: 1;
+}
 
 /* GitHub Pages rebuild trigger 2026-10-02 */
