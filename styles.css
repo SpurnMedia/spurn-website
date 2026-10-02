@@ -2302,3 +2302,28 @@ main,
   position: relative;
   z-index: 1;
 }
+/* =========================================================
+   CULTURE TILE — IMAGE TEST
+   Keep canonical black + preserve HTML typography
+   ========================================================= */
+
+.visual-culture-image {
+  position: relative;
+  isolation: isolate;
+  background:
+    linear-gradient(
+      rgba(17, 17, 17, 0.38),
+      rgba(17, 17, 17, 0.38)
+    ),
+    url("assets/home-tiles/Gritty Kolkata Signage Study.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-color: #111111;
+}
+
+.visual-culture-image .track-label,
+.visual-culture-image strong {
+  position: relative;
+  z-index: 1;
+}
