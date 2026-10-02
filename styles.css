@@ -2327,3 +2327,29 @@ main,
   position: relative;
   z-index: 1;
 }
+/* =========================================================
+   TECHNOLOGY TILE — IMAGE TEST
+   Keep canonical paper + outline + preserve HTML typography
+   ========================================================= */
+
+.visual-technology-image {
+  position: relative;
+  isolation: isolate;
+  background:
+    linear-gradient(
+      rgba(242, 239, 232, 0.52),
+      rgba(242, 239, 232, 0.52)
+    ),
+    url("assets/home-tiles/Australia U16 Social Media Study.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-color: #f2efe8;
+  border: 2px solid #111111;
+}
+
+.visual-technology-image .track-label,
+.visual-technology-image strong {
+  position: relative;
+  z-index: 1;
+}
