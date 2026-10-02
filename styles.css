@@ -2131,3 +2131,49 @@ main,
   }
 
 }
+
+
+/* =========================================================
+   INTELLIGENCE — DESKTOP VIEWPORT FIT + TITLE ALIGNMENT
+   ========================================================= */
+
+@media (min-width: 901px) {
+
+  /* Land the section directly below the 90px sticky header. */
+  #intelligence {
+    scroll-margin-top: 90px;
+    min-height: calc(100svh - 90px);
+    padding-top: clamp(36px, 4.5vh, 48px);
+    padding-bottom: clamp(36px, 4.5vh, 48px);
+  }
+
+  /* Keep the section compact enough for all three cards to fit on entry. */
+  #intelligence .section-heading {
+    margin-bottom: clamp(24px, 3vh, 30px);
+  }
+
+  #intelligence .section-heading h2 {
+    font-size: clamp(3rem, 4.4vw, 4.4rem);
+  }
+
+  #intelligence .intelligence-grid article {
+    min-height: 0;
+    padding: clamp(24px, 2vw, 30px);
+  }
+
+  /*
+    Use a fixed top margin instead of auto spacing so every headline starts
+    on the same horizontal line, independent of paragraph length.
+  */
+  #intelligence .intelligence-grid h3 {
+    margin: 28px 0 16px;
+    font-size: clamp(2rem, 2.55vw, 3rem);
+    line-height: 0.96;
+  }
+
+  #intelligence .intelligence-grid p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.42;
+  }
+}
