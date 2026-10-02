@@ -2268,3 +2268,37 @@ main,
     font-size: 0.61rem;
   }
 }
+/* =========================================================
+   CREATIVITY TILE — IMAGE TEST
+   Keep canonical red + preserve HTML typography
+   ========================================================= */
+
+.visual-creativity-image {
+  position: relative;
+  isolation: isolate;
+  background:
+    linear-gradient(
+      rgba(231, 66, 45, 0.42),
+      rgba(231, 66, 45, 0.42)
+    ),
+    url("assets/home-tiles/ChatGPT Image Oct 2, 2026, 01_20_48 PM.png");
+  background-size: cover;
+  background-position: 58% 48%;
+  background-repeat: no-repeat;
+  background-color: #e7422d;
+}
+
+.visual-creativity-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(231, 66, 45, 0.10);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.visual-creativity-image .track-label,
+.visual-creativity-image strong {
+  position: relative;
+  z-index: 1;
+}
