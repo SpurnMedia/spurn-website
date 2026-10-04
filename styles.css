@@ -2423,5 +2423,23 @@ main,
   .discovery-card-visual-murmur .discovery-visual-label {
   color: #f5f1e8;
 }
+  /* DISCOVERY — KALLAX STORAGEBORN */
+
+.discovery-kallax-image {
+  background-image:
+    linear-gradient(
+      rgba(217, 119, 42, 0.10),
+      rgba(217, 119, 42, 0.10)
+    ),
+    url("assets/home-tiles/Cozy-fantasy-Longhouse-Shelves.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.discovery-kallax-image .discovery-visual-label {
+  color: #f2efe8;
+  z-index: 2;
+}
 
 /* GitHub Pages rebuild trigger 2026-10-02 */
