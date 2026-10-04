@@ -300,6 +300,24 @@ main,
   margin-top: 14px;
 }
 
+/* TOP TRACK CATEGORY COLOURS */
+
+.lead-grid .track-card:nth-child(1) .category {
+  color: var(--accent);
+}
+
+.lead-grid .track-card:nth-child(2) .category {
+  color: var(--ink);
+}
+
+.lead-grid .track-card:nth-child(3) .category {
+  color: var(--muted);
+}
+
+.lead-grid .track-card:nth-child(4) .category {
+  color: var(--orange);
+}
+
 .track-card h2 {
   min-height: 3.2em;
   margin: 16px 0 12px;
