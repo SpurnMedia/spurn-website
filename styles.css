@@ -2420,10 +2420,13 @@ main,
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  .discovery-card-visual-murmur .discovery-visual-label {
+}
+
+.discovery-card-visual-murmur .discovery-visual-label {
   color: #f5f1e8;
 }
-  /* DISCOVERY — KALLAX STORAGEBORN */
+
+/* DISCOVERY — KALLAX STORAGEBORN */
 
 .discovery-kallax-image {
   background-image:
@@ -2439,6 +2442,7 @@ main,
 
 .discovery-kallax-image .discovery-visual-label {
   color: #f2efe8;
+  position: relative;
   z-index: 2;
 }
 
