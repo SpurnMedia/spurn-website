@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search — SPURN</title>
+  <meta name="description" content="Search published SPURN stories.">
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="https://spurnmedia.com/search/">
+  <meta property="og:title" content="Search — SPURN">
+  <meta property="og:description" content="Search published SPURN stories.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://spurnmedia.com/search/">
+  <meta name="theme-color" content="#f2efe8">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="search.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="wordmark" aria-label="Spurn Media homepage">
+        <img src="../Spurn-logo.svg?v=1" alt="SPURN Media">
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="../index.html#news">The Latest</a>
+        <a href="../index.html#discovery">Discovery</a>
+        <a href="../index.html#intelligence">Intelligence</a>
+        <a href="../index.html#editorial">Editorial</a>
+        <a href="../index.html#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="search-page">
+    <div class="search-inner">
+      <header class="search-head">
+        <span class="search-kicker">SPURN / Search</span>
+        <h1>Search</h1>
+      </header>
+
+      <form class="search-form" role="search" action="/search/" method="get">
+        <label for="search-query">Search published stories</label>
+        <div class="search-control">
+          <input id="search-query" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="Title, subject or format">
+          <button type="submit">Search</button>
+        </div>
+      </form>
+
+      <p class="search-status" id="search-status" aria-live="polite">Loading search index…</p>
+      <div class="search-results" id="search-results"></div>
+
+      <noscript>
+        <p class="search-noscript">Search requires JavaScript. Browse <a href="../latest/">The Latest</a>, <a href="../discovery/">Discovery</a>, <a href="../intelligence/">Intelligence</a> or <a href="../editorial/">Editorial</a>.</p>
+      </noscript>
+    </div>
+  </main>
+
+  <footer class="site-footer closing-footer">
+    <a class="wordmark footer-wordmark" href="../index.html">SPURN</a>
+    <p>Independent. Curious. Constructively disobedient.</p>
+    <div class="footer-links">
+      <a href="../index.html">Home</a>
+      <a href="mailto:hello@spurnmedia.com">Contact</a>
+    </div>
+    <small>© <span id="year"></span> Spurn Media.</small>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script src="search.js"></script>
+</body>
+</html>
