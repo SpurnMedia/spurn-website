@@ -531,13 +531,40 @@ main,
   border-bottom: 2px solid var(--ink);
 }
 
-.newsletter-status {
-  grid-template-columns: 1fr;
+.newsletter-signup {
+  min-width: 0;
+  align-self: end;
 }
 
-.newsletter-status span {
+.newsletter-form[hidden] {
+  display: none;
+}
+
+.newsletter-status {
+  margin: 0;
   padding: 16px 0;
+  border-bottom: 2px solid var(--ink);
   font-weight: 600;
+}
+
+.newsletter-honeypot {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.newsletter-form.is-submitting {
+  opacity: 0.65;
+}
+
+.newsletter-form.is-submitting button {
+  cursor: progress;
 }
 
 .newsletter input,
