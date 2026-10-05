@@ -1,0 +1,69 @@
+/* Shared section archive system */
+
+.archive-page {
+  width: 100%;
+  background: var(--paper);
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+
+.archive-page-inner {
+  padding: clamp(42px, 6vw, 86px) var(--pad) clamp(72px, 9vw, 126px);
+}
+
+.archive-head {
+  padding: clamp(34px, 5vw, 72px) 0 clamp(34px, 5vw, 58px);
+}
+
+.archive-kicker {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.archive-head h1 {
+  max-width: 1120px;
+  margin: 0;
+  font-size: clamp(3.6rem, 9vw, 9rem);
+  font-weight: 600;
+  line-height: 0.86;
+  letter-spacing: -0.065em;
+}
+
+.archive-list {
+  border-top: 1px solid var(--line);
+}
+
+.archive-list .latest-wire-row {
+  min-height: 78px;
+}
+
+@media (max-width: 900px) {
+  .archive-page-inner {
+    padding-top: 32px;
+    padding-bottom: 84px;
+  }
+
+  .archive-head {
+    padding-top: 38px;
+  }
+}
+
+@media (max-width: 600px) {
+  .archive-page-inner {
+    padding-top: 24px;
+    padding-bottom: 64px;
+  }
+
+  .archive-head h1 {
+    font-size: clamp(3rem, 18vw, 5.4rem);
+  }
+
+  .archive-list .latest-wire-row {
+    min-height: 94px;
+  }
+}
