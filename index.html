@@ -419,8 +419,33 @@
       <h2 id="newsletter-title">Clarity, without the noise.</h2>
     </div>
 
-    <div class="newsletter-form newsletter-status" aria-label="Newsletter status">
-      <span>Subscriptions are not open yet.</span>
+    <div class="newsletter-signup">
+      <form class="newsletter-form" data-newsletter-form hidden novalidate>
+        <label class="sr-only" for="newsletter-email">Email address</label>
+        <input
+          id="newsletter-email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          inputmode="email"
+          placeholder="Email address"
+          required
+        >
+        <input
+          class="newsletter-honeypot"
+          name="website"
+          type="text"
+          tabindex="-1"
+          autocomplete="off"
+          aria-hidden="true"
+        >
+        <input name="source" type="hidden" value="spurnmedia-homepage">
+        <button type="submit">Subscribe</button>
+      </form>
+
+      <p class="newsletter-status" data-newsletter-status role="status" aria-live="polite">
+        Subscriptions are not open yet.
+      </p>
     </div>
   </section>
 
@@ -465,5 +490,7 @@
 
 </section>
   <script src="script.js"></script>
+  <script src="newsletter-config.js"></script>
+  <script src="newsletter.js"></script>
 </body>
 </html>
