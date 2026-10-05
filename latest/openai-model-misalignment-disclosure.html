@@ -24,8 +24,8 @@
     .article-body p{margin:0 0 1.4em;font-size:clamp(1.08rem,1.5vw,1.32rem);line-height:1.65;letter-spacing:-.012em}
     .article-footer{max-width:var(--max);margin:0 auto;padding:28px var(--pad);border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:24px;color:var(--muted);font-size:.72rem}
     @media(max-width:900px){
-      .site-nav{display:none}
-      .menu-button{display:none}
+      .site-nav{display:none;top:76px}
+      
       .header-inner{min-height:76px}
       .wordmark img{width:170px;height:56px}
       .article-shell{padding-top:28px;padding-bottom:72px}
@@ -48,7 +48,7 @@
       <a href="../index.html" class="wordmark" aria-label="Spurn Media homepage">
         <img src="../Spurn-logo.svg?v=1" alt="SPURN Media">
       </a>
-      <nav class="site-nav" aria-label="Primary navigation">
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button><nav class="site-nav" id="site-nav" aria-label="Primary navigation">
         <a href="../index.html#news">The Latest</a>
         <a href="../index.html#discovery">Discovery</a>
         <a href="../index.html#intelligence">Intelligence</a>
@@ -94,5 +94,5 @@
     <a href="../index.html">SPURN</a>
     <span>Independent. Curious. Constructively disobedient.</span>
   </footer>
-</body>
+<script src="../script.js"></script></body>
 </html>
