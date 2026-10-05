@@ -44,10 +44,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  opacity: 0.58;
-}
-
 img {
   display: block;
   max-width: 100%;
@@ -492,7 +488,7 @@ main,
 }
 
 .discovery-grid span {
-  color: var(--accent);
+  color: var(--accent-text);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 0.72rem;
@@ -1060,7 +1056,7 @@ main,
 /* TRACK LANGUAGE */
 
 .track-creativity {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .track-culture {
@@ -1068,7 +1064,7 @@ main,
 }
 
 .track-brands {
-  color: var(--orange, #d9772a);
+  color: var(--orange-text);
 }
 
 .track-technology {
