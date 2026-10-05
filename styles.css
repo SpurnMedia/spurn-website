@@ -6,7 +6,9 @@
   --muted: #6f6b63;
   --line: #171717;
   --accent: #e7422d;
+  --accent-text: #b83224;
   --orange: #d9772a;
+  --orange-text: #9c4f14;
   --white: #fffdf8;
   --max: 1440px;
   --pad: clamp(20px, 4vw, 64px);
@@ -303,7 +305,7 @@ main,
 /* TOP TRACK CATEGORY COLOURS */
 
 .lead-grid .track-card:nth-child(1) .category {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .lead-grid .track-card:nth-child(2) .category {
@@ -315,7 +317,7 @@ main,
 }
 
 .lead-grid .track-card:nth-child(4) .category {
-  color: var(--orange);
+  color: var(--orange-text);
 }
 
 .track-card h2 {
@@ -2465,3 +2467,35 @@ main,
 }
 
 /* GitHub Pages rebuild trigger 2026-10-02 */
+
+
+/* =========================================================
+   ACCESSIBILITY FOUNDATION
+   Visible keyboard focus + reduced-motion preference
+   ========================================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--paper);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
