@@ -30,3 +30,29 @@ const year = document.querySelector("#year");
 if (year) {
   year.textContent = new Date().getFullYear();
 }
+
+
+/* PERFORMANCE — defer below-fold Discovery artwork until it is near the viewport. */
+const discoverySection = document.querySelector("#discovery");
+
+if (discoverySection) {
+  const revealDiscoveryImages = () => {
+    discoverySection.classList.add("images-ready");
+  };
+
+  if ("IntersectionObserver" in window) {
+    const discoveryObserver = new IntersectionObserver(
+      (entries, observer) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          revealDiscoveryImages();
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "700px 0px" }
+    );
+
+    discoveryObserver.observe(discoverySection);
+  } else {
+    revealDiscoveryImages();
+  }
+}

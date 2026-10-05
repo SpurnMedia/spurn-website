@@ -2402,7 +2402,7 @@ main,
    DISCOVERY — JIA CURATED MAIN IMAGE
    ========================================================= */
 
-.discovery-media-jia {
+.discovery-section.images-ready .discovery-media-jia {
   background-image:
     linear-gradient(
       rgba(242, 239, 232, 0.08),
@@ -2419,13 +2419,13 @@ main,
   position: relative;
   z-index: 1;
 }
-.discovery-type-around-visual {
+.discovery-section.images-ready .discovery-type-around-visual {
   background-image: url("assets/home-tiles/Urban-Typography-in-Grayscale-and-Red.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-.discovery-islands-image {
+.discovery-section.images-ready .discovery-islands-image {
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.08),
       rgba(0, 0, 0, 0.08)
@@ -2435,7 +2435,7 @@ main,
   background-position: center;
   background-repeat: no-repeat;
 }
-.discovery-card-visual-murmur {
+.discovery-section.images-ready .discovery-card-visual-murmur {
   background-image: url("assets/home-tiles/Moonlit-Noir-Canal-Town.png");
   background-size: cover;
   background-position: center;
@@ -2448,7 +2448,7 @@ main,
 
 /* DISCOVERY — KALLAX STORAGEBORN */
 
-.discovery-kallax-image {
+.discovery-section.images-ready .discovery-kallax-image {
   background-image:
     linear-gradient(
       rgba(217, 119, 42, 0.10),
