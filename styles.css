@@ -2310,7 +2310,7 @@ main,
       rgba(231, 66, 45, 0.42),
       rgba(231, 66, 45, 0.42)
     ),
-   url("assets/home-tiles/Monochrome Brutalist House Diorama.png");
+   url("assets/optimized/creativity-jia.webp");
   background-size: cover;
   background-position: 58% 48%;
   background-repeat: no-repeat;
@@ -2344,7 +2344,7 @@ main,
       rgba(17, 17, 17, 0.38),
       rgba(17, 17, 17, 0.38)
     ),
-    url("assets/home-tiles/Gritty Kolkata Signage Study.png");
+    url("assets/optimized/culture-type-around-town.webp");
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -2369,7 +2369,7 @@ main,
       rgba(242, 239, 232, 0.52),
       rgba(242, 239, 232, 0.52)
     ),
-    url("assets/home-tiles/Australian Flag Billowing in Blue Sky.png");
+    url("assets/optimized/technology-australia-u16.webp");
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -2395,7 +2395,7 @@ main,
       rgba(217, 119, 42, 0.46),
       rgba(217, 119, 42, 0.46)
     ),
-    url("assets/home-tiles/Warm Orange Storage Showroom.png");
+    url("assets/optimized/brands-kallax.webp");
   background-size: cover;
   background-position: 58% 50%;
   background-repeat: no-repeat;
@@ -2417,7 +2417,7 @@ main,
       rgba(242, 239, 232, 0.08),
       rgba(242, 239, 232, 0.08)
     ),
-    url("assets/home-tiles/What an Architectural Model Lets You See.png");
+    url("assets/optimized/discovery-jia.webp");
 
   background-size: cover;
   background-position: center center;
@@ -2429,7 +2429,7 @@ main,
   z-index: 1;
 }
 .discovery-section.images-ready .discovery-type-around-visual {
-  background-image: url("assets/home-tiles/Urban-Typography-in-Grayscale-and-Red.png");
+  background-image: url("assets/optimized/discovery-type-around-town.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2439,13 +2439,13 @@ main,
       rgba(0, 0, 0, 0.08),
       rgba(0, 0, 0, 0.08)
     ),
-    url("assets/Celestial-Archipelag-Map.png");
+    url("assets/optimized/discovery-look-between-islands.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .discovery-section.images-ready .discovery-card-visual-murmur {
-  background-image: url("assets/home-tiles/Moonlit-Noir-Canal-Town.png");
+  background-image: url("assets/optimized/discovery-mur-mur.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2463,7 +2463,7 @@ main,
       rgba(217, 119, 42, 0.10),
       rgba(217, 119, 42, 0.10)
     ),
-    url("assets/home-tiles/Cozy-fantasy-Longhouse-Shelves.png");
+    url("assets/optimized/discovery-kallax.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
