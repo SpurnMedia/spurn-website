@@ -531,6 +531,15 @@ main,
   border-bottom: 2px solid var(--ink);
 }
 
+.newsletter-status {
+  grid-template-columns: 1fr;
+}
+
+.newsletter-status span {
+  padding: 16px 0;
+  font-weight: 600;
+}
+
 .newsletter input,
 .newsletter button {
   border: 0;
