@@ -52,7 +52,15 @@
         </div>
       </form>
 
-      <p class="search-status" id="search-status" aria-live="polite">Loading search index…</p>
+      <div class="search-filters" role="group" aria-label="Filter published stories by editorial format">
+        <button class="search-format-filter" type="button" data-format="all" aria-pressed="true">All formats</button>
+        <button class="search-format-filter" type="button" data-format="The Latest" aria-pressed="false">The Latest</button>
+        <button class="search-format-filter" type="button" data-format="Discovery" aria-pressed="false">Discovery</button>
+        <button class="search-format-filter" type="button" data-format="Intelligence" aria-pressed="false">Intelligence</button>
+        <button class="search-format-filter" type="button" data-format="Editorial" aria-pressed="false">Editorial</button>
+      </div>
+
+      <p class="search-status" id="search-status" aria-live="polite">Loading published stories…</p>
       <div class="search-results" id="search-results"></div>
 
       <noscript>
