@@ -2531,3 +2531,27 @@ select:focus-visible,
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Cross-format story explorer: progressive enhancement to the published wire. */
+.latest-wire-explore {
+  margin: 0;
+  padding: 18px 0 20px;
+  text-align: right;
+  border-top: 0;
+}
+.latest-wire-explore a {
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+}
+.latest-wire-explore a:hover,
+.latest-wire-explore a:focus-visible {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
