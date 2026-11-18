@@ -174,3 +174,44 @@
     gap: 7px;
   }
 }
+
+/* Public-story format browser */
+.search-form { padding-bottom: 24px; }
+.search-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 20px;
+}
+.search-format-filter {
+  min-height: 40px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  transition: background 150ms ease, color 150ms ease;
+}
+.search-format-filter[aria-pressed="true"] {
+  color: var(--paper);
+  background: var(--ink);
+  border-color: var(--ink);
+}
+.search-format-filter:hover:not([aria-pressed="true"]) {
+  border-color: var(--ink);
+}
+.search-format-filter:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+.search-format-filter:disabled { opacity: 0.55; cursor: not-allowed; }
+@media (max-width: 600px) {
+  .search-filters { gap: 7px; }
+  .search-format-filter { min-height: 44px; padding: 12px; }
+}
