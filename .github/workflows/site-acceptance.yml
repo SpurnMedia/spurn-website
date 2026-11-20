@@ -19,3 +19,7 @@ jobs:
         run: python3 scripts/audit_site.py
       - name: Verify public publication index
         run: python3 scripts/audit_publications.py
+      - name: Ensure no private newsroom artifacts in Pages
+        run: python3 scripts/audit_private_boundary.py
+      - name: Test private boundary policy
+        run: python3 -m unittest discover -s scripts -p 'test_audit_private_boundary.py' -q
