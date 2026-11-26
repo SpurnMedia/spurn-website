@@ -23,3 +23,11 @@ jobs:
         run: python3 scripts/audit_private_boundary.py
       - name: Test private boundary policy
         run: python3 -m unittest discover -s scripts -p 'test_audit_private_boundary.py' -q
+      - name: Install release-verifier dependency
+        run: python3 -m pip install --disable-pip-version-check 'cryptography>=44,<48'
+      - name: Test signed production release contract
+        run: python3 -m unittest discover -s scripts -p 'test_release_intent.py' -q
+      - name: Test public-only Pages builder
+        run: python3 -m unittest discover -s scripts -p 'test_build_pages_artifact.py' -q
+      - name: Exercise public-only Pages artifact
+        run: python3 scripts/build_pages_artifact.py --source . --output "${{ runner.temp }}/spurn-pages-ci"
