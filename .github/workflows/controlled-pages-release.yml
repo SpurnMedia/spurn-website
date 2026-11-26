@@ -1,0 +1,93 @@
+name: SPURN controlled Pages release (disabled by default)
+
+# No automatic agent/branch publishing. A short-lived external production
+# signature is required; private signer keys must never enter this repository.
+on:
+  workflow_dispatch:
+    inputs:
+      commit_sha:
+        description: Exact approved commit SHA on main
+        type: string
+        required: true
+      release_intent_b64:
+        description: Public-metadata-only, canonical signed intent (base64url)
+        type: string
+        required: true
+      signature_b64:
+        description: Ed25519 signature over intent bytes (base64url)
+        type: string
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: spurn-controlled-pages-production
+  cancel-in-progress: false
+
+jobs:
+  verify-and-build:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout exact release commit
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Require explicit enablement and exact commit
+        shell: bash
+        env:
+          SPURN_PAGES_RELEASE_ENABLED: ${{ secrets.SPURN_PAGES_RELEASE_ENABLED }}
+          EXPECTED_SHA: ${{ github.sha }}
+          RELEASE_COMMIT: ${{ inputs.commit_sha }}
+        run: |
+          set -euo pipefail
+          test "$SPURN_PAGES_RELEASE_ENABLED" = 'true' || { echo 'NO-GO: publishing disabled'; exit 1; }
+          test "$RELEASE_COMMIT" = "$EXPECTED_SHA" || { echo 'NO-GO: wrong release commit'; exit 1; }
+
+      - name: Install Ed25519 verifier
+        run: python3 -m pip install --disable-pip-version-check 'cryptography>=44,<48'
+
+      - name: Verify signed production release intent
+        env:
+          SPURN_PAGES_RELEASE_ENABLED: ${{ secrets.SPURN_PAGES_RELEASE_ENABLED }}
+          SPURN_RELEASE_PUBLIC_KEY_B64: ${{ secrets.SPURN_RELEASE_PUBLIC_KEY_B64 }}
+          SPURN_RELEASE_INTENT_B64: ${{ inputs.release_intent_b64 }}
+          SPURN_RELEASE_SIGNATURE_B64: ${{ inputs.signature_b64 }}
+          SPURN_EXPECTED_COMMIT: ${{ github.sha }}
+        run: python3 scripts/verify_release_intent.py
+
+      - name: SPURN site and privacy acceptance gates
+        run: |
+          set -euo pipefail
+          python3 scripts/audit_private_boundary.py
+          python3 scripts/audit_publications.py
+          python3 scripts/audit_site.py
+          python3 -m unittest discover -s scripts -p 'test_audit_private_boundary.py' -q
+          python3 -m unittest discover -s scripts -p 'test_release_intent.py' -q
+          python3 -m unittest discover -s scripts -p 'test_build_pages_artifact.py' -q
+
+      - name: Build public-only site
+        run: python3 scripts/build_pages_artifact.py --source . --output "${{ runner.temp }}/spurn-pages"
+
+      - name: Upload verified Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ runner.temp }}/spurn-pages
+
+  deploy:
+    needs: verify-and-build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy approved artifact
+        id: deployment
+        uses: actions/deploy-pages@v4
